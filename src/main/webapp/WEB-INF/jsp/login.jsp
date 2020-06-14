@@ -10,26 +10,23 @@
 <html>
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js'></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 </head>
 <body>
 <div class="loginBox">
     <h1>Login Here</h1>
-    <form action="loginServlet" method="post">
+    <form action="loginServlet" method="get">
         <p>Username</p>
         <input type="text" name="name" placeholder="Enter Username">
         <p>Password</p>
         <input type="password" name="password" placeholder="Enter Password">
         <input type="submit" name="submit" value="Login">
-        <a href="register" >Register</a>
+<%--        <a href="register" >Register</a>--%>
     </form>
-<%--    <form action="register.jsp" method="post">--%>
-<%--        <input type="submit" name="submit" value="Register">--%>
-<%--    </form>--%>
-    <form action="forgotPassword" method="post">
-        <input type="submit" name="submit" value="Forgot Password">
+    <form action="register" method="get">
+        <input type="submit" name="submit" value="Register">
     </form>
 </div>
 <c:if test = "${isError}">

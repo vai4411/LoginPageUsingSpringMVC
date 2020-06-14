@@ -32,4 +32,13 @@ public class WelcomeController {
         return "welcome";
     }
 
+    @RequestMapping(path = "/login",method = RequestMethod.GET)
+    public String loginProcess() {
+        return "login";
+    }
+
+    @RequestMapping(path = "/forgotPassword",method = RequestMethod.GET)
+    public String forgotPassword() {
+        return "forgotPassword";
+    }
 }

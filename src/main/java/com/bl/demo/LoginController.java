@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 @RequestMapping("/loginServlet")
 public class LoginController {
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.GET)
     public String login(Model model, HttpServletRequest request) {
         String userName = request.getParameter("name");
         String password = request.getParameter("password");
@@ -37,6 +37,7 @@ public class LoginController {
             if(isSuccess) {
                 HttpSession  session = request.getSession(true);
                 session.setMaxInactiveInterval(15 * 60);
+                session.setAttribute("name",userName);
                 session.setAttribute("email",email);
                 session.setAttribute("id",id);
                 session.setAttribute("date",date);
