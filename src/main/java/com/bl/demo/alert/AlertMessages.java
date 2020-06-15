@@ -1,4 +1,4 @@
-package com.bl.demo;
+package com.bl.demo.alert;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -61,18 +61,6 @@ public class AlertMessages {
     public static void databaseErrorMassage(HttpServletResponse response) throws IOException {
         openScript(response);
         getWriter(response).println("swal ( 'Database Error' ,  'Database Not Able To Store Data!' ,  'error' );");
-        closeScript(response);
-    }
-
-    public static void passwordChangedSuccessfulMassage(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Password Changed SuccessFully...' ,  '' ,  'success' );");
-        closeScript(response);
-    }
-
-    public static void passwordChangedErrorMassage(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Password Not Changed...' ,  'New Password And Confirm Password Not Matched...' ,  'error' );");
         closeScript(response);
     }
 }

@@ -1,4 +1,4 @@
-package com.bl.demo;
+package com.bl.demo.database;
 
 import java.sql.*;
 
@@ -28,13 +28,5 @@ public class DBConnection {
 
     public static ResultSet getEntries(String userName, String password) throws SQLException, ClassNotFoundException {
         return getStatement().executeQuery("select * from demo where name=\'"+userName+"\' AND password=\'"+password+"\'");
-    }
-
-    public static ResultSet getEntriesForRecovery(String userName, String email) throws SQLException, ClassNotFoundException {
-        return getStatement().executeQuery("select * from demo where name=\'"+userName+"\' AND email=\'"+email+"\'");
-    }
-
-    public static int updateEntries(String userName, String actualPassword, String email) throws SQLException, ClassNotFoundException {
-        return getStatement().executeUpdate("update demo set password=\'"+actualPassword+"\' where name=\'"+userName+"\' and email=\'"+email+"\'");
     }
 }

@@ -1,6 +1,7 @@
-package com.bl.demo;
+package com.bl.demo.controller;
 
-import org.springframework.stereotype.Component;
+import com.bl.demo.alert.AlertMessages;
+import com.bl.demo.database.DBConnection;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +16,7 @@ import java.util.regex.Pattern;
 
 import static java.lang.String.valueOf;
 
-@Component
+@Controller
 @RequestMapping("/registerServlet")
 public class RegisterController {
 
