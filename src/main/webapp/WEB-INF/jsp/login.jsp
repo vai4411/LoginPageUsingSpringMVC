@@ -18,9 +18,9 @@
 <div class="loginBox">
     <h1>Login Here</h1>
     <form action="loginServlet" method="get">
-        <p>Username</p>
+<%--        <p>Username</p>--%>
         <input type="text" name="name" placeholder="Enter Username">
-        <p>Password</p>
+<%--        <p>Password</p>--%>
         <input type="password" name="password" placeholder="Enter Password">
         <input type="submit" name="submit" value="Login">
     </form>

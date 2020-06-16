@@ -1,8 +1,10 @@
 package com.bl.demo.database;
 
+import com.bl.demo.UserOperation;
+
 import java.sql.*;
 
-public class DBConnection {
+public class DBConnection implements UserOperation {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
             Class.forName("com.mysql.jdbc.Driver");
