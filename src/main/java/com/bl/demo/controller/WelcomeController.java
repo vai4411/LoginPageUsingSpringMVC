@@ -34,8 +34,4 @@ public class WelcomeController {
         return "login";
     }
 
-    @RequestMapping(path = "/forgotPassword",method = RequestMethod.GET)
-    public String forgotPassword() {
-        return "forgotPassword";
-    }
 }

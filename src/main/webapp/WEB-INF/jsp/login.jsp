@@ -23,7 +23,6 @@
         <p>Password</p>
         <input type="password" name="password" placeholder="Enter Password">
         <input type="submit" name="submit" value="Login">
-<%--        <a href="register" >Register</a>--%>
     </form>
     <form action="register" method="get">
         <input type="submit" name="submit" value="Register">

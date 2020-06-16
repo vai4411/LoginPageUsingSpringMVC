@@ -22,11 +22,25 @@ public class DBConnection {
         getStatement().close();
     }
 
-    public static int setEntries(String userName, String actualPassword, String email) throws SQLException, ClassNotFoundException {
-        return getStatement().executeUpdate("insert into demo(name,password,email,date) values(\'"+userName+"\',\'"+actualPassword+"\',\'"+email+"\', now())");
+    public static int setEntries(String userName, String actualPassword, String email) {
+        try {
+            return getStatement().executeUpdate("insert into demo(name,password,email,date) values(\'"+userName+"\',\'"+actualPassword+"\',\'"+email+"\', now())");
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 
-    public static ResultSet getEntries(String userName, String password) throws SQLException, ClassNotFoundException {
-        return getStatement().executeQuery("select * from demo where name=\'"+userName+"\' AND password=\'"+password+"\'");
+    public static ResultSet getEntries(String userName, String password) {
+        try {
+            return getStatement().executeQuery("select * from demo where name=\'"+userName+"\' AND password=\'"+password+"\'");
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

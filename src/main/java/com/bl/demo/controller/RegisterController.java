@@ -35,7 +35,7 @@ public class RegisterController {
                 && actualPassword.equals(confirmPassword) && email.trim().length() > 9) {
             int n = 0;
             try {
-                n = DBConnection.setEntries(userName, actualPassword, email);
+                n = DBConnection.setEntries(userName, actualPassword, email.toLowerCase());
                 DBConnection.closeConnection();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
