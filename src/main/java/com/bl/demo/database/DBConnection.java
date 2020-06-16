@@ -24,7 +24,7 @@ public class DBConnection implements UserOperation {
         getStatement().close();
     }
 
-    public static int setEntries(String userName, String actualPassword, String email) {
+    public static int setEntries(String userName, String actualPassword, String email, String time) {
         try {
             return getStatement().executeUpdate("insert into demo(name,password,email,date) values(\'"+userName+"\',\'"+actualPassword+"\',\'"+email+"\', now())");
         } catch (SQLException throwables) {
