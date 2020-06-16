@@ -2,26 +2,50 @@ body{
     margin: 0;
     padding: 0;
     background-size: cover;
-    background: url(images/dark4.jpg) center;
+    background-color: deepskyblue;
     font-family: sans-serif;
 }
 
 .loginBox{
-    width: 320px;
-    height: 400px;
-    background: transparent;
-    color: white;
-    top: 45%;
+    border-bottom: 10px solid cadetblue;
+    border-top: 10px solid cadetblue;
+    border-left: 10px solid cadetblue;
+    border-right: 10px solid cadetblue;
+    width: 520px;
+    height: 440px;
+    background: white;
+    color: deepskyblue;
+    top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50% , -50%);
     box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.loginBox1{
+    border-bottom: 10px solid cadetblue;
+    border-top: 10px solid cadetblue;
+    border-left: 10px solid cadetblue;
+    border-right: 10px solid cadetblue;
+    width: 520px;
+    /*width: 600px;*/
+    height: 500px;
+    background: white;
+    color: deepskyblue;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    box-sizing: border-box;
+    border-radius: 30px;
 }
 
 h1{
     padding: 0;
     text-align: center;
     font-size: 30px;
+    margin-bottom: 35px;
 }
 
 h3{
@@ -30,35 +54,42 @@ h3{
     font-size: 20px;
 }
 
-.loginBox p{
+.loginBox p, .loginBox1 p{
     margin: 0;
     padding: 0;
     font-weight: bolder;
 }
 
-.loginBox input{
-    width: 100%;
-    margin-bottom: 20px;
+.loginBox input, .loginBox1 input{
+    width: 360px;
+    margin-left: 70px;
+    padding-left: 30px;
 }
 
-.loginBox input[type="text"], input[type="password"], input[type="actualPassword"], input[type="email"]
+.loginBox input[type="text"], input[type="password"], input[type="actualPassword"], input[type="email"],
+.loginBox1 input[type="text"], input[type="password"], input[type="actualPassword"], input[type="email"]
 {
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
-    outline: none;
+    margin-bottom: 35px;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    background: white;
+    outline: black;
     height: 40px;
-    color: white;
+    color: black;
     font-size: 16px;
-}
-
-.loginBox input[type="submit"]
-{
-    outline: white;
-    height: 40px;
-    background: transparent;
-    color: white;
-    font-size: 18px;
     border-radius: 20px;
 }
 
+.loginBox input[type="submit"], .loginBox1 input[type="submit"]
+{
+    margin-bottom: 15px;
+    height: 40px;
+    background: deepskyblue;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}

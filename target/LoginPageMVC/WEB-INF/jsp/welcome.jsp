@@ -19,7 +19,6 @@
 <form action="logout" method="get">
     <h1>Welcome...</h1>
     <h3>Welcome,${name}<br><br>
-<%--    Your registration id is ${id}<br><br>--%>
     Your entry date and time is ${date}<br><br>
     Your email address is ${email}<br><br>
     </h3>

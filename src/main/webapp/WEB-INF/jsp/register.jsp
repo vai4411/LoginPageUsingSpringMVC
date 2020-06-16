@@ -12,21 +12,14 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body>
-<div class="loginBox">
+<div class="loginBox1">
     <h1>Register Here</h1>
     <form action="registerServlet" method="get">
-        <p>Username</p>
         <input type="text" name="name" placeholder="Enter Username">
-        <p>Password</p>
         <input type="password" name="password" placeholder="Enter Password">
-        <p>Confirm Password</p>
         <input type="password" name="confirmPassword" placeholder="Enter Password">
-        <p>Email Address</p>
         <input type="email" name="email" placeholder="Enter Email">
         <input type="submit" name="submit" value="Register">
-    </form>
-    <form action="login" method="get">
-        <input type="submit" name="submit" value="Login">
     </form>
 </div>
 </body>
