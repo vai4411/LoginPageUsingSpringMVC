@@ -22,30 +22,6 @@ public class AlertMessages {
         getWriter(response).println("</script>");
     }
 
-    public static void loginSuccessfulMessage(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Login Successful' ,  '' ,  'success' );");
-        closeScript(response);
-    }
-
-    public static void dbCredentialFound(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Username And Email Found...' ,  '' ,  'success' );");
-        closeScript(response);
-    }
-
-    public static void dbCredentialNotFound(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Username Or Email Not Matches...' ,  '' ,  'error' );");
-        closeScript(response);
-    }
-
-    public static void loginFailMassage(HttpServletResponse response) throws IOException {
-        openScript(response);
-        getWriter(response).println("swal ( 'Login Unsuccessful' ,  'Wrong UserName Or Password!' ,  'error' );");
-        closeScript(response);
-    }
-
     public static void registerSuccessfulMessage(HttpServletResponse response) throws IOException {
         openScript(response);
         getWriter(response).println("swal ( 'Registration Successful' ,  '' ,  'success' );");

@@ -1,4 +1,4 @@
-package com.bl.demo;
+package com.bl.demo.model;
 
 public class User {
     private String name;
@@ -6,10 +6,19 @@ public class User {
     private String email;
     private String datetime;
 
-    public User(String name, String password, String email, String datetime) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setDatetime(String datetime) {
         this.datetime = datetime;
     }
 

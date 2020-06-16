@@ -1,7 +1,9 @@
 package com.bl.demo.controller;
 
+import com.bl.demo.model.User;
+import com.bl.demo.model.UserDAO;
+import com.bl.demo.service.UserDAOImp;
 import com.bl.demo.alert.AlertMessages;
-import com.bl.demo.database.DBConnection;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,7 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Pattern;
 
 import static java.lang.String.valueOf;
@@ -35,11 +38,15 @@ public class RegisterController {
                 && actualPassword.equals(confirmPassword) && email.trim().length() > 9) {
             int n = 0;
             try {
-                n = DBConnection.setEntries(userName, actualPassword, email.toLowerCase());
-                DBConnection.closeConnection();
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            } catch (ClassNotFoundException e) {
+                UserDAO userDAO = new UserDAOImp();
+                User user = new User();
+                user.setName(userName);
+                user.setPassword(actualPassword);
+                user.setEmail(email);
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                user.setDatetime(dtf.format(LocalDateTime.now()));
+                n = userDAO.insertUser(user);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             if (n > 0) {

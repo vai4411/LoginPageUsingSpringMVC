@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 public class LogoutController {
 
     @RequestMapping(path = "/logout",method = RequestMethod.GET)
-    public String logout(HttpServletRequest request, HttpServletResponse response) {
+    public String logout(HttpServletRequest request) {
         HttpSession session = request.getSession(true);
         session.setAttribute("user",null);
         session.invalidate();
