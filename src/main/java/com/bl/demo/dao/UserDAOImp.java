@@ -1,7 +1,7 @@
-package com.bl.demo.service;
+package com.bl.demo.dao;
 
 import com.bl.demo.model.User;
-import com.bl.demo.model.UserDAO;
+import com.bl.demo.dao.UserDAO;
 import com.bl.demo.repository.DBConnectionProvider;
 
 import java.sql.Connection;

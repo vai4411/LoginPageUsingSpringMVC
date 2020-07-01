@@ -15,13 +15,9 @@
 <div class="loginBox1">
     <h1>Register Here</h1>
     <form action="registerServlet" method="get">
-<%--        <p>Username</p>--%>
         <input type="text" name="name" placeholder="Enter Username">
-<%--        <p>Password</p>--%>
-        <input type="password" name="password" placeholder="Enter Password">
-<%--        <p>Confirm Password</p>--%>
-        <input type="password" name="confirmPassword" placeholder="Enter Password">
-<%--        <p>Email Address</p>--%>
+        <input type="password" name="password" placeholder="Enter New Password">
+        <input type="password" name="confirmPassword" placeholder="Enter Confirm Password">
         <input type="email" name="email" placeholder="Enter Email">
         <input type="submit" name="submit" value="Register">
     </form>

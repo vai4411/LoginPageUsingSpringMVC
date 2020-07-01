@@ -16,8 +16,8 @@
     <h1>Register Here</h1>
     <form action="registerServlet" method="get">
         <input type="text" name="name" placeholder="Enter Username">
-        <input type="password" name="password" placeholder="Enter Password">
-        <input type="password" name="confirmPassword" placeholder="Enter Password">
+        <input type="password" name="password" placeholder="Enter New Password">
+        <input type="password" name="confirmPassword" placeholder="Enter Confirm Password">
         <input type="email" name="email" placeholder="Enter Email">
         <input type="submit" name="submit" value="Register">
     </form>

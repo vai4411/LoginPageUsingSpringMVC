@@ -1,8 +1,8 @@
 package com.bl.demo.controller;
 
 import com.bl.demo.model.User;
-import com.bl.demo.model.UserDAO;
-import com.bl.demo.service.UserDAOImp;
+import com.bl.demo.dao.UserDAO;
+import com.bl.demo.dao.UserDAOImp;
 import com.bl.demo.alert.AlertMessages;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

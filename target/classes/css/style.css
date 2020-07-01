@@ -3,7 +3,6 @@ body{
     padding: 0;
     background-size: cover;
     background-color: deepskyblue;
-    /*background: url(images/dark4.jpg) center;*/
     font-family: sans-serif;
 }
 
@@ -62,28 +61,19 @@ h3{
 }
 
 .loginBox input, .loginBox1 input{
-    /*width: 100%;*/
-    /*margin-bottom: 20px;*/
     width: 360px;
     margin-left: 70px;
-    /*margin-left: 110px;*/
     padding-left: 30px;
 }
 
 .loginBox input[type="text"], input[type="password"], input[type="actualPassword"], input[type="email"],
 .loginBox1 input[type="text"], input[type="password"], input[type="actualPassword"], input[type="email"]
 {
-    /*border: none;*/
     margin-bottom: 35px;
     border-bottom: 1px solid grey;
     border-top: 1px solid grey;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
-    /*border-bottom: 1px solid black;*/
-    /*border-top: 1px solid black;*/
-    /*border-left: 1px solid black;*/
-    /*border-right: 1px solid black;*/
-    /*border-bottom: black;*/
     background: white;
     outline: black;
     height: 40px;
@@ -94,9 +84,6 @@ h3{
 
 .loginBox input[type="submit"], .loginBox1 input[type="submit"]
 {
-    /*width: 200px;*/
-    /*margin-left: 160px;*/
-    /*outline: white;*/
     margin-bottom: 15px;
     height: 40px;
     background: deepskyblue;
@@ -106,7 +93,3 @@ h3{
     border: none;
     outline: none;
 }
-
-/*::-webkit-input-placeholder {*/
-/*    padding: 10px;*/
-/*}*/
