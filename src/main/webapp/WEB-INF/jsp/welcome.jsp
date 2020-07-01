@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="loginBox">
-<form action="logout" method="get">
+<form action="logout" method="post">
     <h1>Welcome...</h1>
     <h3>Welcome,${name}<br><br>
     Your entry date and time is ${date}<br><br>

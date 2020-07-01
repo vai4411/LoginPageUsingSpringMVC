@@ -22,7 +22,7 @@
         <input type="password" name="password" placeholder="Enter Password">
         <input type="submit" name="submit" value="Login">
     </form>
-    <form action="register" method="get">
+    <form action="register" method="post">
         <input type="submit" name="submit" value="Register">
     </form>
 </div>

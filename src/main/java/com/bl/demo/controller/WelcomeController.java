@@ -12,24 +12,24 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class WelcomeController {
 
-    @RequestMapping(path = "",method = RequestMethod.GET)
+    @RequestMapping(path = "",method = RequestMethod.POST)
     public String login() {
         return "login";
     }
 
-    @RequestMapping(path = "/register",method = RequestMethod.GET)
+    @RequestMapping(path = "/register",method = RequestMethod.POST)
     public String register() {
         return "register";
     }
 
-    @RequestMapping(path = "/welcome",method = RequestMethod.GET)
+    @RequestMapping(path = "/welcome",method = RequestMethod.POST)
     public String welcome(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
         session.setAttribute("isSuccess",false);
         return "welcome";
     }
 
-    @RequestMapping(path = "/login",method = RequestMethod.GET)
+    @RequestMapping(path = "/login",method = RequestMethod.POST)
     public String loginProcess() {
         return "login";
     }
